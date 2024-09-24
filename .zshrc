@@ -14,8 +14,8 @@ compinit
 
 
 typeset -A ZSH_HIGHLIGHT_STYLES
-ZSH_HIGHLIGHT_STYLES[single-hyphpen-option]='fg=blue'
-ZSH_HIGHLIGHT_STYLES[double-hyphpen-option]='fg=blue,bold'
+ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=blue'
+ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=blue,bold'
 
 # Prompt
 if zmodload zsh/terminfo && (( terminfo[colors] >= 256 )); then
