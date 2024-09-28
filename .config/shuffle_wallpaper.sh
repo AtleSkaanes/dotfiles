@@ -1,1 +1,0 @@
-hypr/shuffle_wallpaper.sh
