@@ -31,6 +31,21 @@ eval "$(zoxide init zsh --cmd cd)"
 ## ALIASES
 alias ll='ls -alF'
 
+## FUNCTIONS
+
+function yy() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
+
+function mkdirc() {
+    mkdir $1 && cd $1
+}
+
 ## KEYBINDS
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;50" backward-word
