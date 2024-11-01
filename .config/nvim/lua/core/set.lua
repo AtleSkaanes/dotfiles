@@ -41,8 +41,8 @@ vim.opt.updatetime = 250
 vim.opt.colorcolumn = '80'
 
 --- Background
---vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 --- Hyperlinks
 vim.cmd('set conceallevel=2')

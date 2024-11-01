@@ -117,6 +117,8 @@ return {
                 'pylsp',
                 'marksman',
                 'elixirls',
+                'texlab',
+                'zls',
             },
             handlers = {
                 lsp_zero.default_setup,
@@ -153,6 +155,12 @@ return {
                         },
                     })
                 end,
+                texlab = function()
+                    lspconfig.texlab.setup({})
+                end,
+                zls = function()
+                    lspconfig.zls.setup({})
+                end
             },
         })
 

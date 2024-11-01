@@ -46,8 +46,8 @@ return {
                 'c',
                 '  Configure',
                 '<cmd>cd '
-                    .. vim.fn.stdpath('config')
-                    .. '<CR><cmd>NvimTreeFindFileToggle<CR><C-w>l<cmd>q<CR>'
+                .. vim.fn.stdpath('config')
+                .. '<CR><cmd>NvimTreeFindFileToggle<CR><C-w>l<cmd>q<CR>'
             ),
             dashboard.button('q', '󰅚  Quit NVIM', ':qa<CR>'),
         }

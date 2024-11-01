@@ -1,0 +1,26 @@
+configuration{
+    modi: "calc";
+    lines: 0;
+    font: "Jetbrains mono nerd font 11";
+    show-icons: true;
+    /*icon-theme: "Oranchelo";*/
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-calc: "󰃬"; 
+    sidebar-mode: false;
+}
+
+@theme "catppuccin-mocha"
+
+listview {
+    lines: 0;
+    padding: 0px;
+    border: none;
+}
+
+entry {
+    placeholder: "Calc";
+}

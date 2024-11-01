@@ -1,62 +1,160 @@
 @import "mocha.css";
 
 * {
-  border: none;
-  font-family: 'JetbrainsMono Nerd Font';
-  font-size: 13px;
-  font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
-  min-height: 35px;
+    border: none;
+    font-family: 'JetbrainsMono Nerd Font';
+    font-size: 13px;
+    font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+    /* min-height: 35px; */
 }
 
 window#waybar {
-  background: transparent;
+    background: transparent;
 }
+
+/*------------*/
+/* WORKSPACES */
+/*------------*/
 
 #custom-arch, #workspaces {
-  border-radius: 10px;
-  background-color: @crust;
-  color: @lavender;
-  margin-top: 10px;
-  margin-right: 10px;
-  padding-top: 1px;
-  padding-left: 10px;
-  padding-right: 10px;
+    border-radius: 10px;
+    background-color: @crust;
+    color: @lavender;
+    margin-top: 10px;
+    margin-right: 15px;
+    padding-top: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
-#custom-arch {
-  font-size: 16px;
-  margin-left: 10px;
-  color: #b4befe;
-}
 
 #workspaces button {
-  background: @crust;
-  color: @lavender;
+    background: @crust;
+    color: @lavender;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease-in-out;
 }
 
-#clock, #backlight, #pulseaudio, #bluetooth, #network, #battery{
-  border-radius: 10px;
-  background-color: @crust;
-  color: @text;
-  margin-top: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
-  margin-right: 15px;
+#workspaces button.active {
+    color: @rosewater;
+    transition: all 0.3s ease-in-out;
+}
+
+#workspaces button:hover {
+    background: @base,
+}
+
+/*----------*/
+/* TOOLTIPS */
+/*----------*/
+
+tooltip {
+    border-radius: 10px;
+    background-color: @crust;
+    opacity: 0.8;
+    padding: 20px;
+    margin: 0px;
+    border: 2px solid @lavender;
+}
+
+
+/*------*/
+/* TRAY */
+/*------*/
+
+#tray {
+    background: @crust;
+    margin-right: 15px;
+    margin-top: 10px;
+    padding: 0px 15px 0px 15px;
+    border-radius: 10px;
+    color: @text;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: #eb4d4b;
+    color: @red;
+}
+
+
+/*---------*/
+/* BATTERY */
+/*---------*/
+
+#battery.charging, #battery.plugged {
+    color: @green;
+}
+
+#battery.warning:not(.charging) {
+    color: @yellow;
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+}
+
+/*-------*/
+/* POWER */
+/*-------*/
+
+#custom-arch {
+    font-size: 16px;
+    margin-left: 15px;
+    margin-right: 15px;
+    color: #b4befe;
+}
+
+
+/*--------------*/
+/* NOTIFICATION */
+/*--------------*/
+
+#custom-notification {
+    background: @blue;
+}
+
+#custom-notification span {
+    color: @red;
+}
+
+
+/*------*/
+/* MISC */
+/*------*/
+
+span {
+    color: @lavender;
+}
+
+#clock, #backlight, #pulseaudio, #bluetooth, #network, #battery, #custom-notification {
+    border-radius: 10px;
+    background-color: @crust;
+    color: @text;
+    margin-top: 15px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 15px;
 }
 
 #backlight, #bluetooth {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  padding-right: 5px;
-  margin-right: 0
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    padding-right: 5px;
+    margin-right: 0
 }
 
 #pulseaudio, #network {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding-left: 5px;
 }
 
 #clock {
-  margin-right: 0;
+    margin-right: 0;
 }
