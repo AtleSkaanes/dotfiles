@@ -6,6 +6,10 @@
     border-col: #1e1e2e;
     selected-col: #1e1e2e;
     blue: #89b4fa;
+    lavender: #b4befe;
+    red: #f38ba8;
+    green: #a6e3a1;
+    accent: @lavender;
     fg-col: #cdd6f4;
     fg-col2: #f38ba8;
     grey: #6c7086;
@@ -23,6 +27,7 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
+    location: center;
     background-color: @bg-col-trans;
     border-radius: 10px;
     border: 1px;
@@ -45,7 +50,7 @@ inputbar {
 
 prompt {
     background-color: @bg-col-sub;
-    text-color: @blue;
+    text-color: @accent;
     border-radius: 3px;
     /*padding: 0px 15px 0px 10px;*/
     padding: 0px 10px 0px 0px;
@@ -84,13 +89,13 @@ element-icon {
 }
 
 element selected {
-    background-color:  @blue;
+    background-color:  @accent;
     text-color: @bg-col;
     border-radius: 2px;
 }
 
 message {
-    background-color: @blue;
+    background-color: @accent;
     margin: 2px;
     padding: 2px 2px 2px 10px;
     border-radius: 2px;
@@ -130,7 +135,7 @@ textbox {
 /*}*/
 /**/
 /*prompt {*/
-/*    background-color: @blue;*/
+/*    background-color: @accent;*/
 /*    padding: 6px;*/
 /*    text-color: @bg-col;*/
 /*    border-radius: 3px;*/
@@ -189,7 +194,7 @@ textbox {
 /**/
 /*button selected {*/
 /*  background-color: @bg-col;*/
-/*  text-color: @blue;*/
+/*  text-color: @accent;*/
 /*}*/
 /**/
 /*message {*/
@@ -202,6 +207,6 @@ textbox {
 /*textbox {*/
 /*    padding: 6px;*/
 /*    margin: 20px 0px 0px 20px;*/
-/*    text-color: @blue;*/
+/*    text-color: @accent;*/
 /*    background-color: @bg-col-light;*/
 /*}*/
