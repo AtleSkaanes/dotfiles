@@ -1,7 +1,5 @@
-
 configuration{
-    modi: "run,drun,window,calc,recursivebrowser";
-    lines: 8;
+    lines: 0;
     font: "Jetbrains mono nerd font 11";
     show-icons: true;
     /*icon-theme: "Oranchelo";*/
@@ -10,13 +8,18 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "";
-    display-run: "";
-    display-window: "";
-    display-calc: "󰃬"; 
-    display-recursivebrowser: "";
-    display-Network: "󰤨"; 
     sidebar-mode: false;
 }
 
 @theme "catppuccin-mocha"
+
+listview {
+    lines: 3;
+    columns: 3;
+    padding: 0px;
+    border: none;
+}
+
+element {
+    padding: 25px 0px 25px 10px;
+}

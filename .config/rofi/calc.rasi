@@ -24,3 +24,11 @@ listview {
 entry {
     placeholder: "Calc";
 }
+
+textbox {
+    padding: 0px;
+    border: 0px;
+    border-radius: 0px;
+    text-color: @bg-col;
+    background-color: @bg-col-sub;
+}

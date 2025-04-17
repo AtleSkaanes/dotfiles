@@ -1,6 +1,5 @@
-
 configuration{
-    modi: "run,drun,window,calc,recursivebrowser";
+    modi: "";
     lines: 8;
     font: "Jetbrains mono nerd font 11";
     show-icons: true;
@@ -10,13 +9,18 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "";
-    display-run: "";
-    display-window: "";
-    display-calc: "󰃬"; 
-    display-recursivebrowser: "";
-    display-Network: "󰤨"; 
     sidebar-mode: false;
 }
 
 @theme "catppuccin-mocha"
+
+mainbox {
+    padding: 2px 10px 2px 10px;
+}
+
+
+listview {
+    lines: 0;
+    padding: 0px;
+    border: none;
+}

@@ -1,7 +1,5 @@
-
 configuration{
-    modi: "run,drun,window,calc,recursivebrowser";
-    lines: 8;
+    lines: 3;
     font: "Jetbrains mono nerd font 11";
     show-icons: true;
     /*icon-theme: "Oranchelo";*/
@@ -10,13 +8,32 @@ configuration{
     location: 0;
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "";
-    display-run: "";
-    display-window: "";
-    display-calc: "󰃬"; 
-    display-recursivebrowser: "";
-    display-Network: "󰤨"; 
     sidebar-mode: false;
 }
 
 @theme "catppuccin-mocha"
+
+listview {
+    lines: 3;
+    columns: 3;
+    padding: 0px;
+    border: none;
+    spacing: 10px;
+}
+
+entry {
+    enabled: false;
+}
+
+element-text {
+    enabled: false;
+}
+
+element-icon {
+    size: 190px;
+    border-radius: 10px;
+}
+
+element {
+    padding: -35px 0px -35px 0px;
+}
