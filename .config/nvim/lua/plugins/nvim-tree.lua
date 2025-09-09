@@ -18,10 +18,10 @@ return {
                     git = {
                         unstaged = '✗',
                         staged = '✓',
-                        unmerged = '',
+                        unmerged = ' ',
                         renamed = '➜',
-                        untracked = '★',
-                        deleted = '',
+                        untracked = ' ',
+                        deleted = ' ',
                         ignored = '◌',
                     },
                 },

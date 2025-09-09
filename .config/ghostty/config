@@ -1,0 +1,10 @@
+theme = catppuccin-mocha
+font-family = JetBrainsMono NerdFont
+
+background-opacity = 0.95
+
+# custom-shader = ./shaders/dither.glsl
+
+# window-decoration = false
+# gtk-titlebar = false
+# gtk-adwaita = false

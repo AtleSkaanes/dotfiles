@@ -1,0 +1,2 @@
+[language-server.zls]
+config = { enable_build_on_save = true }

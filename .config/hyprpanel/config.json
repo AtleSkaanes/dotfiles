@@ -1,0 +1,188 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.size": "1.1rem",
+  "theme.font.weight": 500,
+  "menus.transition": "crossfade",
+  "theme.notification.scaling": 80,
+  "theme.bar.floating": false,
+  "theme.bar.location": "top",
+  "theme.bar.buttons.enableBorders": false,
+  "bar.scrollSpeed": 5,
+  "theme.bar.border_radius": "0.7em",
+  "theme.bar.buttons.radius": "0.7rem",
+  "theme.bar.buttons.dashboard.enableBorder": false,
+  "bar.launcher.rightClick": "menu:powerdropdown",
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.numbered_active_indicator": "highlight",
+  "bar.workspaces.showWsIcons": false,
+  "bar.volume.rightClick": "pwvucontrol",
+  "bar.bluetooth.middleClick": "blueman-manager",
+  "bar.media.show_label": true,
+  "theme.osd.orientation": "vertical",
+  "theme.osd.location": "right",
+  "theme.osd.muted_zero": true,
+  "menus.clock.time.military": true,
+  "menus.clock.weather.key": "b5e2133d7db2465f8c8194839242210",
+  "menus.clock.weather.location": "Aarhus",
+  "menus.dashboard.shortcuts.enabled": true,
+  "menus.dashboard.shortcuts.left.shortcut3.command": "vesktop",
+  "menus.dashboard.directories.enabled": false,
+  "bar.customModules.weather.unit": "metric",
+  "bar.launcher.middleClick": "",
+  "theme.bar.menus.monochrome": true,
+  "theme.bar.menus.opacity": 100,
+  "theme.matugen": false,
+  "theme.bar.opacity": 0,
+  "theme.bar.buttons.monochrome": false,
+  "theme.bar.buttons.dashboard.icon": "#89b4fa",
+  "theme.bar.buttons.dashboard.border": "#89b4fa",
+  "theme.bar.buttons.workspaces.hover": "#cdd6f4",
+  "theme.bar.buttons.workspaces.available": "#9399b2",
+  "theme.bar.buttons.workspaces.active": "#b4befe",
+  "theme.bar.buttons.workspaces.occupied": "#b4befe",
+  "theme.osd.opacity": 90,
+  "menus.clock.weather.unit": "metric",
+  "theme.bar.outer_spacing": "1.6em",
+  "bar.clock.format": "%b %d  %H:%M:%S",
+  "theme.bar.buttons.clock.text": "#b4befe",
+  "theme.bar.buttons.clock.icon": "#b4befe",
+  "theme.bar.buttons.clock.border": "#b4befe",
+  "theme.bar.buttons.battery.icon": "#b4befe",
+  "theme.bar.buttons.battery.text": "#b4befe",
+  "theme.bar.buttons.battery.border": "#b4befe",
+  "theme.bar.menus.menu.notifications.height": "100em",
+  "theme.osd.scaling": 100,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle",
+        "media"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "updates",
+        "bluetooth",
+        "volume",
+        "network",
+        "battery",
+        "systray",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle",
+        "media"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "updates",
+        "bluetooth",
+        "volume",
+        "battery",
+        "systray",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle",
+        "media"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "media",
+        "updates",
+        "bluetooth",
+        "volume",
+        "battery",
+        "systray",
+        "notifications"
+      ]
+    }
+  },
+  "menus.media.displayTimeTooltip": true,
+  "notifications.clearDelay": 10,
+  "notifications.timeout": 10000,
+  "menus.dashboard.powermenu.avatar.name": "atle",
+  "menus.dashboard.shortcuts.left.shortcut1.icon": "",
+  "menus.dashboard.shortcuts.left.shortcut1.command": "firefox",
+  "menus.dashboard.shortcuts.left.shortcut1.tooltip": "Firefox",
+  "bar.customModules.netstat.networkInterface": "wlan0",
+  "bar.customModules.netstat.dynamicIcon": true,
+  "theme.bar.buttons.modules.netstat.enableBorder": true,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.showApplicationIcons": false,
+  "theme.bar.buttons.workspaces.enableBorder": false,
+  "bar.workspaces.monitorSpecific": false,
+  "bar.workspaces.workspaceMask": false,
+  "bar.workspaces.showAllActive": false,
+  "theme.bar.buttons.volume.enableBorder": false,
+  "bar.volume.label": true,
+  "bar.network.showWifiInfo": true,
+  "bar.clock.showIcon": true,
+  "bar.media.truncation_size": 10,
+  "bar.media.show_active_only": true,
+  "bar.notifications.show_total": false,
+  "menus.media.displayTime": true,
+  "theme.bar.buttons.modules.cpu.enableBorder": false,
+  "bar.customModules.cpu.pollingInterval": 2000,
+  "bar.customModules.cava.icon": "",
+  "bar.customModules.cava.spaceCharacter": " ",
+  "bar.customModules.cava.showActiveOnly": true,
+  "theme.bar.buttons.workspaces.fontSize": "1em",
+  "theme.osd.enable": true,
+  "theme.bar.buttons.battery.enableBorder": false,
+  "bar.windowtitle.title_map": [
+    [
+      "gjs",
+      "",
+      "gjs"
+    ],
+    [
+      "eog",
+      "",
+      "eog"
+    ],
+    [
+      "org.prismlauncher.prismlauncher",
+      "󰍳",
+      "PrismLauncher"
+    ],
+    [
+      "org.pwmt.zathura",
+      "",
+      "zathura"
+    ],
+    [
+      "com.saivert.pwvucontrol",
+      "󰓃",
+      "Pwvucontrol"
+    ],
+    [
+      "batlert",
+      "",
+      "batlert"
+    ],
+    [
+      "codium",
+      "",
+      "vscodium"
+    ]
+  ],
+  "bar.customModules.storage.paths": [
+    "/"
+  ]
+}

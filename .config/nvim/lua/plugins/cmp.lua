@@ -10,6 +10,7 @@ local icons = {
     Keyword = '󰌆',
     Method = '󰡱',
     Field = '',
+    Operator = '',
     Module = '󰀼',
     Snippet = '󰘖',
     Text = '󰦨',

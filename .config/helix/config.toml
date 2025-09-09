@@ -1,0 +1,17 @@
+theme = "catppuccin_mocha"
+
+
+[editor.lsp]
+display-inlay-hints = true
+display-messages = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"
+other-lines = "error"
+
+[editor.file-picker]
+hidden = false
+
+
+[keys.normal]
+"-" = { "d" = "goto_next_diag", "D" = "goto_prev_diag" }

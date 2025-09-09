@@ -1,3 +1,13 @@
+local splashes = {
+    '󰝚 Dancing to cat guitar 󰝚 ',
+    '󰝚 Get up, Stand up 󰝚 ',
+    'Neovim, destroyer of free time',
+    'Part of the complete Arch experience',
+    '"Wait, what do you mean with Rust doesn\'t automatically make everything *🚀 blazingly fast*"',
+    'Now with 10% less SEGFAULTS',
+    -- vim.fn.system('hyprctl', 'splash'),
+}
+
 return {
     'goolord/alpha-nvim',
     main = 'alpha',
@@ -46,13 +56,14 @@ return {
                 'c',
                 '  Configure',
                 '<cmd>cd '
-                .. vim.fn.stdpath('config')
-                .. '<CR><cmd>NvimTreeFindFileToggle<CR><C-w>l<cmd>q<CR>'
+                    .. vim.fn.stdpath('config')
+                    .. '<CR><cmd>NvimTreeFindFileToggle<CR><C-w>l<cmd>q<CR>'
             ),
             dashboard.button('q', '󰅚  Quit NVIM', ':qa<CR>'),
         }
         dashboard.section.footer.val = {
-            [["10/10 - Wasted so much time here" - Atle]],
+            splashes[math.random(#splashes)],
+            -- [["10/10 - Wasted so much time here" - Atle]],
         }
         return dashboard.config
     end,

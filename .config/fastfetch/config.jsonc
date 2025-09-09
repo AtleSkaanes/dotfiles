@@ -37,13 +37,34 @@
             "type": "wm",
             "key": "󱂬 "
         },
-        "terminalfont",
-        "cpu",
-        "gpu",
-        "memory",
-        "swap",
-        "disk",
-        "battery",
+        //{
+        //    "type": "terminalfont",
+        //    "key": " "
+        //},
+        {
+            "type": "cpu",
+            "key": " "            
+        },
+        //{
+        //    "type": "gpu",
+        //    "key": "gpu"
+        //},
+        {
+            "type": "memory",
+            "key": "󰍛 "
+        },
+        {
+            "type": "swap",
+            "key": " "
+        },
+        {
+            "type": "disk",
+            "key": "󰋊 "
+        },
+        {
+            "type": "battery",
+            "key": "󰁹 "
+        },
         "poweradapter",
         "break",
         "colors"

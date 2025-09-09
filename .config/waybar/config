@@ -1,103 +1,34 @@
 {
-    "layer": "top",
-    "modules-left": ["custom/arch", "tray", "hyprland/workspaces"],
-    "modules-center": ["clock"],
-    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery" /*, "custom/notification" */],
-    "custom/arch": {
-        "format": "  ",
-        "tooltip": false,
-        // "on-click": "sh $HOME/.config/rofi/bin/powermenu"
-        "on-click": "wlogout"
-    },
-    "tray": {
-        /* "icon-size": 21, */
-        "spacing": 10
-    },
-    "hyprland/workspaces": {
-        "on-click": "activate",
-        "active-only": false,
-        /* "all-outputs": true, */
-        "format": "{name}",
-        "format": "{}",
-        "format-icons": {
-            "urgent": "",
-            "active": "",
-            "default": "",
-        },
-        //"persistent-workspaces": {
-        //    "*": 5
-        //}
-    },
-    "clock": {
-        "interval": 1,
-        "format": "<span color='#b4befe'>  </span>{:%H:%M:%S}",
-    },
-    "backlight": {
-        "device": "intel_backlight",
-        "format": "<span color='#b4befe'>{icon}</span> {percent}%",
-        "tooltip": false,
-        "format-icons": ["", "", "", "", "", "", "", "", ""]
-    },
-    "pulseaudio": {
-        "format": "<span color='#b4befe'>{icon}</span> {volume}%",
-        "format-muted": "",
-        "format-tooltip": "{volume}% {icon}",
-        "format-icons": {
-            "headphone": "",
-            "default": ["", " ", "󰕾 ", "󰕾 ", "󰕾 ", " ", " ", " "]
-        },
-        "scroll-step": 1,
-        "on-click": "pavucontrol",
-    },
-    "bluetooth": {
-        "format": "<span color='#b4befe'></span> {status}",
-        "format-disabled": "", // an empty format will hide the module
-        "format-no-controller": "",
-        "format-connected": "<span color='#b4befe'>󰂱 </span>{num_connections}",
-        "tooltip-format": "{device_enumerate}",
-        "on-click": "blueman-manager",
-        "tooltip-format-enumerate-connected": "{device_alias}   {device_address}",
-    },
-    "network": {
-        "format": "{ifname}",
-        "format-wifi": "<span color='#b4befe'>  </span>{essid}",
-        "format-ethernet": "{ipaddr}/{cidr} 󰈀  ",
-        "format-disconnected": "<span color='#b4befe'>󰖪 </span>",
-        "tooltip": true,
-        "tooltip-format-wifi": "󰀌  {ipaddr}\n󱘖  {signalStrength}\n󰇚 {bandwidthDownBits} / {bandwidthUpBits} 󰕒"
-    },
-    "battery": {
-        "interval": 1,
-        "states": {
-            "warning": 25,
-            "critical": 10
-        },
-        "format": "{capacity}% {icon}",
-        "format-icons": [ "󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
-        "format-charging": "{capacity}% 󰂄",
-        "format-warning": "{capacity}% 󰂃",
-        "format-warning": "{capacity}% 󰂃",
-        "format-critical": "{capacity}% 󱟨",
-        "tooltip-format": "{capacity}% capacity"
-    },
-    "custom/notification": {
-        "tooltip": false,
-        "format": "{icon}",
-        "format-icons": {
-            "notification": " <span><sup></sup></span>",
-            "none": " ",
-            "dnd-notification": " <span><sup></sup></span>",
-            "dnd-none": " ",
-            "inhibited-notification": " <span><sup></sup></span>",
-            "inhibited-none": " ", 
-            "dnd-inhibited-notification": " <span><sup></sup></span>",
-            "dnd-inhibited-none": " "
-        },
-        "return-type": "json",
-        "exec-if": "which swaync-client",
-        "exec": "swaync-client -swb",
-        "on-click": "swaync-client -t -sw",
-        "on-click-right": "swaync-client -d -sw",
-        "escape": true
-    },
+  "layer": "top",
+  "position": "top",
+  "margin-top": 10,
+  "margin-left": 10,
+  "margin-bottom": 0,
+  "margin-right": 10,
+  "height": 27,
+  "gtk-layer-shell": true,
+  "reload_style_on_change": true,
+
+  "include": ["~/.config/waybar/modules"],
+  "modules-left": [
+    "custom/menu",
+    "hyprland/workspaces",
+    "group/sysinfo",
+    "wlr/taskbar",
+    // "hyprland/window",
+    "custom/active_window",
+    "custom/mediaplayer"
+  ],
+  "modules-center": ["clock"],
+  "modules-right": [
+    "custom/updates",
+    "custom/weather",
+    "pulseaudio",
+    "backlight",
+    "bluetooth",
+    "network",
+    "battery",
+    "tray",
+    "custom/notifications"
+  ]
 }

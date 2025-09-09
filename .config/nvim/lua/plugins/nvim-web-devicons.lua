@@ -18,6 +18,7 @@ return {
         override_by_filename = {
             ['.gitignore'] = {
                 icon = '',
+                name = '.gitignore',
                 color = '#f1502f',
             },
         },

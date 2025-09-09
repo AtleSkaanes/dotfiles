@@ -102,6 +102,12 @@ return {
                 .. (this_os == 'Linux' and '.so' or '.dylib')
         end
 
+        dap.adapters.lldb = {
+            type = 'executable',
+            command = '/usr/bin/lldb',
+            name = 'lldb'
+        }
+
         dap.adapters.codelldb = {
             type = 'server',
             port = '${port}',
@@ -116,7 +122,7 @@ return {
         dap.configurations.cpp = {
             {
                 name = 'Launch',
-                type = 'codelldb',
+                type = 'lldb',
                 request = 'launch',
                 program = function()
                     return vim.fn.input(
@@ -132,5 +138,16 @@ return {
         }
         -- If you want to use this for C, add something like this:
         dap.configurations.c = dap.configurations.cpp
+        dap.configurations.zig = {
+            {
+                name = 'Launch',
+                type = 'codelldb',
+                request = 'launch',
+                program = '${workspaceFolder}/zig-out/bin/zig_hello_world.exe',
+                cwd = '${workspaceFolder}',
+                stopOnEntry = false,
+                args = {},
+            },
+        }
     end,
 }

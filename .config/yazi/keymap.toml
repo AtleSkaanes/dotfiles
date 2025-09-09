@@ -1,0 +1,5 @@
+prepend_keymap = [
+    # glow.yazi
+    { on = ["<C-e>"], run = "seek 5" },
+    { on = ["<C-y>"], run = "seek -5" },
+]

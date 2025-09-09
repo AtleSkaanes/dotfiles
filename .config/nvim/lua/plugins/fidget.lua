@@ -1,9 +1,8 @@
 return {
-    'j-hui/fidget.nvim',
-    main = 'fidget',
-    lasy = true,
-    event = 'LspAttach',
-    tag = 'legacy',
-    opts = {},
+    -- 'j-hui/fidget.nvim',
+    -- main = 'fidget',
+    -- lasy = true,
+    -- event = 'LspAttach',
+    -- tag = 'legacy',
+    -- opts = {},
 }
-

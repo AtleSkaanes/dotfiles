@@ -41,12 +41,23 @@ vim.opt.updatetime = 250
 vim.opt.colorcolumn = '80'
 
 --- Background
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
 
 --- Hyperlinks
 vim.cmd('set conceallevel=2')
 
+--- Virtual Text diagnostics
+vim.diagnostic.config({
+    virtual_text = true,
+    virtual_lines = {
+        current_line = true,
+    },
+})
+
 --- New commands
 vim.cmd.command('Wa', 'wa')
 vim.cmd.command('WA', 'wa')
+
+--- Scratch pad
+vim.cmd.command('Scratch', 'edit /var/tmp/SCRATCH')

@@ -38,6 +38,7 @@ return {
                 function() vim.lsp.buf.definition() end,
                 opts
             )
+            vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
             vim.keymap.set('n', 'K', function() vim.lsp.buf.hover() end, opts)
             vim.keymap.set(
                 'n',
@@ -96,10 +97,10 @@ return {
             )
         end)
         lsp_zero.set_sign_icons({
-            error = '',
-            warn = '',
-            hint = '',
-            info = '',
+            error = ' ',
+            warn = ' ',
+            hint = ' ',
+            info = ' ',
         })
 
         local lspconfig = require('lspconfig')
@@ -131,7 +132,7 @@ return {
 
                 clangd = function()
                     lspconfig.clangd.setup({
-                        on_attach = function(client, bufnr)
+                        on_attach = function(client)
                             client.server_capabilities.signatureHelpProvoder =
                                 false
                             -- require('navic').attach(client, bufnr)
@@ -148,19 +149,16 @@ return {
                     }
                     lspconfig.slint_lsp.setup(opts)
                 end,
-                elixirls = function()
-                    lspconfig.elixirls.setup({
-                        cmd = {
-                            'C:/Users/atles/AppData/Local/nvim-data/elixirls/language_server.bat',
+                texlab = function() lspconfig.texlab.setup({}) end,
+                zls = function()
+                    lspconfig.zls.setup({
+                        settings = {
+                            zls = {
+                                enable_build_on_save = true,
+                            },
                         },
                     })
                 end,
-                texlab = function()
-                    lspconfig.texlab.setup({})
-                end,
-                zls = function()
-                    lspconfig.zls.setup({})
-                end
             },
         })
 
