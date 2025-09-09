@@ -1,16 +1,4 @@
 
-path+=("$HOME/go/bin/" "$HOME/.cargo/bin/")
-export PATH
-
-export EDITOR='nvim'
-
-export CXX='clang++'
-export CC='clang'
-
-export DF="$HOME/.dotfiles/"
-
-export GTK_THEME='catppuccin-mocha-sky-standard+default'
-
 # Created by Zap installer
 [ -f "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh" ] && source "${XDG_DATA_HOME:-$HOME/.local/share}/zap/zap.zsh"
 plug "zsh-users/zsh-autosuggestions"
@@ -46,11 +34,21 @@ export FZF_DEFAULT_OPTS=" \
 eval "$(zoxide init zsh --cmd cd)"
 
 ## ALIASES
-alias ll='ls -alF'
+alias ls='eza'
+alias ll='eza -alF'
+
+alias rm='trash-put'
 
 alias peaclock='peaclock --config-dir="$HOME/.config/peaclock/"'
 
 alias whatismyip='curl icanhazip.com'
+
+alias CC="$CC"
+alias CXX="$CXX"
+
+alias hx="helix"
+
+alias weekn="date +%U"
 
 ## FUNCTIONS
 
@@ -63,12 +61,33 @@ function yy() {
 	rm -f -- "$tmp"
 }
 
+function yay() {
+    echo "USING PARU"
+    paru "$@"
+}
+
 function mkdirc() {
-    mkdir $1 && cd $1
+    mkdir "$@" && cd $1
 }
 
 function find-desktop() {
     find ~/.local/share/applications /usr/share/applications /var/lib/flatpak/exports/share/applications/ -name "$1"
+}
+
+function edit-desktop() {
+    $EDITOR "$(find-desktop $1 | fzf)"
+}
+
+function suedit-desktop() {
+    sudoedit "$(find-desktop $1 | fzf)"
+}
+
+function file-select() {
+    zenity --file-selection
+}
+
+function $ {
+    eval '$*'
 }
 
 ## KEYBINDS
@@ -87,3 +106,6 @@ bindkey "^x^e" edit-command-line
 # bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# INITIAL COMMAND
+cowsay "$(hyprctl splash)"
